@@ -25,18 +25,13 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
 
         if(savedInstanceState==null){
-            mywebView.post(new Runnable() {
-                @Override
-                public void run() {
-                    mywebView.loadUrl("https://iums.aust.edu/");
-                }
-            });
+            mywebView.loadUrl("https://iums.aust.edu/");
         }
     }
 
 
 
-    public class mywebClient extends WebViewClient{
+    public class myWebClient extends WebViewClient{
         @Override
         public void onPageStarted(WebView view, String url, Bitmap favicon){
             super.onPageStarted(view,url,favicon);
